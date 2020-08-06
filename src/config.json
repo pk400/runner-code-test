@@ -1,5 +1,6 @@
 {
   "product_url": "https://api.getrunner.io/runner/v4/code-test-product",
+  "api_token": "<api_token>",
   "color_map": {
     "black": "#1B2437",
     "blue": "#127681",
