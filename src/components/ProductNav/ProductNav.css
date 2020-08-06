@@ -8,6 +8,7 @@
   justify-content: space-around;
   margin: 0;
   padding: 0;
+  margin-bottom: 32px;
 }
 
 .product-nav-container a {
@@ -15,7 +16,6 @@
   text-transform: capitalize;
   margin: 0;
   padding: 0;
-  font-weight: 600;
   width: 100%;
   display: inline-block;
   padding-top: 0.7rem;
@@ -30,12 +30,17 @@
 .product-nav-container li {
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .product-nav-container .selected {
-  color: red;
-  border-bottom: 2px solid red;
+  color: #EDA3B5;
+  border-bottom: 1px solid #EDA3B5;
+}
+
+.product-nav-container .selected a:visited,
+.product-nav-container .selected a:link {
+  color: #EDA3B5;
 }
 
 .not-selected {
@@ -43,5 +48,7 @@
 }
 
 .selected-content {
-  padding-top: 2rem;
+  color: #8E8E93;
+  line-height: 24px;
+  margin-bottom: 32px;
 }

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './Favourite.css';
 
 const Favourite = () => {
+  const [selected, setSelected] = useState(false)
   return (
-    <button className="favourite-circle">
-      <img src="/images/iconFavourite.svg" alt="Favourite button" />
-    </button>
+    <img
+      src="/images/iconFavourite.svg"
+      alt="Favourite button"
+      className={selected ? "favourite-selected" : ""}
+      onClick={() => setSelected(!selected)} />
   )
 }
 

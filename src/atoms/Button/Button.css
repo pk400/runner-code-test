@@ -1,0 +1,18 @@
+.button-selected,
+.button-not-selected {
+  border-radius: 8px;
+  padding: 12px 18px 13px 17px;
+  cursor: pointer;
+}
+
+.button-selected {
+  color: #FFF;
+  background-color: #EDA3B5;
+  border: none;
+  box-shadow: 0px 5px 10px #eda3b552;
+}
+
+.button-not-selected {
+  background-color: #D8D8D8;
+  border: 1px solid #E5E5EA;
+}

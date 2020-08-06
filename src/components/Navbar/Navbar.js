@@ -34,7 +34,7 @@ const NavbarCenter = ({children}) => {
 
 const NavbarRight = ({children}) => {
   return (
-    <div>
+    <div className="navbar-right">
       {children}
     </div>
   )

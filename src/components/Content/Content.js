@@ -35,10 +35,10 @@ const Content = () => {
     ]
   }
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
+  const [selectedSize, setSelectedSize] = useState(1)
   const ratings = []
   const averageRating = product.average_rating
   for (let activeCounter = 0; activeCounter < 5; activeCounter++) {
-    console.log(activeCounter < averageRating)
     ratings.push(<Star active={activeCounter < averageRating} />)
   }
   return (
@@ -48,14 +48,18 @@ const Content = () => {
       </div>
       <div className="content-right">
         <div className="tag-favourite-row">
-          {product.tags?.map(tag_name => <Tag>{tag_name}</Tag>)}
-          <Favourite />
+          <div className="tags">
+            {product.tags?.map(tag_name => <Tag>{tag_name}</Tag>)}
+          </div>
+          <div className="favourite-button">
+            <Favourite />
+          </div>
         </div>
         <div className="product-right">
-          <h1>{product.title}</h1>
+          <h1 className="product-title">{product.title}</h1>
           <div className="ratings-row">
             {ratings}
-            <span>{product.number_of_reviews}</span>
+            <span>{product.number_of_reviews} reviews</span>
           </div>
           <ProductNav
             data={{
@@ -70,9 +74,12 @@ const Content = () => {
                 <a href="">Size Guide</a>
               </div>
               <div className="sizes">
-                {product.sizes.map(size => {
-                  return (<Button>{size}</Button>)
-                })}
+                {product.sizes.map((size, index) =>
+                  <Button
+                    onClick={() => setSelectedSize(index)}
+                    selected={selectedSize === index}>
+                      {size}
+                  </Button>)}
               </div>
             </div>
             <div className="color-column">
@@ -81,17 +88,20 @@ const Content = () => {
               </div>
               <div className="colors">
                 {product.colors.map(color =>
-                  <ColorBox color={color} selected={selectedColor === color} />)}
+                  <ColorBox
+                    onClick={() => setSelectedColor(color)}
+                    color={color}
+                    selected={selectedColor === color} />)}
               </div>
             </div>
           </div>
           <div class="price-addcart-row">
             <div className="price">
-              <h2 className="currency-symbol"><sup>$</sup></h2>
-              <h2 className="value">788</h2>
+              <span className="currency-symbol"><sup>$</sup></span>
+              <span className="value">788</span>
             </div>
             <div className="addcart">
-              <Button>Add To Cart</Button>
+              <Button selected>Add To Cart</Button>
             </div>
           </div>
         </div>

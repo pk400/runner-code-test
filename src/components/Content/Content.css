@@ -1,7 +1,9 @@
 .content-container {
   width: 75%;
   margin: auto;
+  margin-top: 2.5rem;
   display: flex;
+  margin-bottom: 72px;
 }
 
 .content-left,
@@ -16,25 +18,46 @@
 .tag-favourite-row {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tags,
+.favourite-button {
+  align-self: center;
+}
+
+.product-title {
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 32px;
 }
 
 .ratings-row {
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
 }
-
 
 .size-color-row {
   display: flex;
+  margin-bottom: 32px;
 }
 
 .size-column {
   width: 50%;
+  margin-right: 82px;
+}
+
+.size-column a:link,
+.size-column a:visited {
+  color: #EDA3B5;
+  text-decoration: none;
 }
 
 .row-headings {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 9px;
 }
 
 .sizes {
@@ -42,23 +65,42 @@
   justify-content: space-between;
 }
 
+.sizes:nth-child(2) {
+  margin: 5px;
+}
+
+.sizes:first-child,
+.sizes:last-child {
+  margin: 0;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+}
+
 .color-column {
   width: 50%;
 }
 
+.price-addcart-row {
+  display: flex;
+}
+
 .price,
 .addcart {
-  display: inline-block
+  display: inline-block;
 }
 
 .price {
   width: 50%;
+  font-size: 34px;
+  font-weight: normal;
 }
 
 .currency-symbol {
   vertical-align: top;
   display: inline-block;
-
 }
 
 .value {
@@ -69,13 +111,60 @@
   width: 50%;
 }
 
+.addcart .button-selected {
+  border-radius: 16px;
+  width: 100%;
+}
+
 @media only screen and (max-width: 620px) {
   .content-container {
     flex-direction: column;
+    margin-top: 40px;
+    width: 90%;
+    margin-bottom: 10px;
   }
 
   .content-left,
   .content-right {
     width: 100%;
+  }
+
+  .content-left {
+    margin-bottom: 40px;
+  }
+
+  .content-right {
+    margin-left: 0;
+  }
+
+  .tag-favourite-row {
+    margin-bottom: 34px;
+  }
+
+  .product-title,
+  .ratings-row {
+    margin-bottom: 28px;
+  }
+
+  .product-title {
+    font-size: 35px;
+  }
+
+  .size-color-row {
+    flex-direction: column;
+  }
+
+  .size-column {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .price-addcart-row {
+    border-top: 1px solid #CECECE;
+    padding-top: 10px;
+    width: 100vw;
+    margin-left: -6%;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }

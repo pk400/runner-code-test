@@ -1,11 +1,16 @@
 import React from 'react';
 
+import './Button.css';
+
 const Button = ({
   children,
-  type='normal'
+  onClick,
+  selected=false
 }) => {
   return (
-    <button>
+    <button
+      onClick={onClick}
+      className={selected ? "button-selected" : "button-not-selected"}>
       {children}
     </button>
   )

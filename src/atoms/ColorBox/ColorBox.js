@@ -1,17 +1,21 @@
 import React from 'react';
 
 import './ColorBox.css';
+import Config from '../../config.json';
 
 const ColorBox = ({
   selected=false,
+  onClick,
   color
 }) => {
   return (
-    <div className={"color-box-outer" + (selected ? " with-border" : "")}>
+    <div
+      onClick={onClick}
+      className={"color-box-outer" + (selected ? " with-border" : "")}>
       <div
         className="color-box-inner"
         style={{
-          backgroundColor: color
+          backgroundColor: Config.color_map[color]
         }} />
     </div>
   )

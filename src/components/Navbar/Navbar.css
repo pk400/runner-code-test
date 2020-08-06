@@ -1,16 +1,35 @@
 .top-navbar {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #C4C4C4;
 }
 
 .top-navbar {
   align-items: center;
 }
 
+
+.navbar-left {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-left,
+.navbar-right {
+  margin: 0.5rem;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-around;
+}
+
 .navbar-links ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-center {
