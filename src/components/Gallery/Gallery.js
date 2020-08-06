@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 import './Gallery.css';
 
@@ -6,6 +8,7 @@ const Gallery = ({
   productId
 }) => {
   const [selectedImage, setSelectedImage] = useState(0)
+  const carousel = useRef(null)
   const thumbnails = [
     "imageDressPrimary.jpg",
     "imageThumb1.jpg",
@@ -13,47 +16,58 @@ const Gallery = ({
     "Bitmap.jpg",
     "imageThumb1.jpg",
   ]
+  const arrowStyles = {
+    position: 'absolute',
+    zIndex: 2,
+    top: 'calc(50% - 15px)',
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    border: 'none',
+    cursor: 'pointer',
+  };
   return (
-    <div>
-      {/* <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src={'/images/' + thumbnails[0]} alt="Los Angeles" />
-          </div>
-
-          <div class="item">
-            <img src={'/images/' + thumbnails[1]} alt="Chicago" />
-          </div>
-
-          <div class="item">
-            <img src={'/images/' + thumbnails[2]} alt="New York" />
-          </div>
-        </div>
-
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div> */}
-      <div className="primaryDisplay">
-        <img className="arrow-left" src="/images/iconArrowLeft.svg" alt="Gallery arrow left" />
-        <img className="selected-image" src="/images/imageDressPrimary.jpg" alt="Black dress" />
-        <img className="arrow-right" src="/images/iconArrowRight.svg" alt="Gallery arrow right" />
-      </div>
+    <div className="gallery">
+      <Carousel
+        ref={carousel}
+        onChange={(index) => setSelectedImage(index)}
+        showIndicators={false}
+        showStatus={false}
+        showThumbs={false}
+        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, left: 15 }}>
+              <img src="/images/iconArrowLeft.svg" alt="Gallery arrow left" />
+            </button>
+          )
+        }
+        renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, right: 15 }}>
+              <img src="/images/iconArrowRight.svg" alt="Gallery arrow right" />
+            </button>
+          )
+        }>
+        {thumbnails.map((thumbnail, index) =>
+          <div>
+            <img src={"/images/" + thumbnail}/>
+          </div>)}
+      </Carousel>
       <div className="thumbnails-container">
         <div className="thumbnails">
           {thumbnails.map((thumbnail, index) =>
-            <div className={(selectedImage === index ? " selected-thumbnail" : "")}>
+            <div
+              onClick={() => {
+                setSelectedImage(index)
+                carousel.current.moveTo(index)
+              }}
+              className={(selectedImage === index ? " selected-thumbnail" : "")}>
               <img
                 className="thumbnail"
                 src={"/images/" + thumbnail}

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Button from '../../atoms/Button/Button';
 import ColorBox from '../../atoms/ColorBox/ColorBox';
@@ -10,31 +10,10 @@ import Star from '../../atoms/Star/Star';
 import Tag from '../../atoms/Tag/Tag';
 
 import './Content.css';
+
 import Config from '../../config.json';
 
 const Content = () => {
-  // const product = {
-  //   "id": 1,
-  //   "title": "Black Valentino dress with tulle",
-  //   "average_rating": 4,
-  //   "number_of_reviews": 132,
-  //   "tags": [
-  //     "popular"
-  //   ],
-  //   "info": "Dress with tulle and collar Peter Pand from REDValentino (Red Valentino). Peter Pan collar, tulle panels, sleeveless model, concealed back zipper and pleated skirt.",
-  //   "brand": "Red Valentino is a highly reputable brand that began in the early 90s and has shown itself to be a true show stopper.",
-  //   "delivery": "This product has same-day shipping available.",
-  //   "sizes": [
-  //     "XS",
-  //     "S",
-  //     "M"
-  //   ],
-  //   "colors": [
-  //     "black",
-  //     "blue",
-  //     "teal"
-  //   ]
-  // }
   const [product, setProduct] = useState({
     id: -1,
     title: "",
@@ -48,16 +27,23 @@ const Content = () => {
     colors: []
   })
   useEffect(() => {
-    axios.get(Config.product_url, {
-
-    })
+    axios
+      .get(Config.product_url, {
+        headers: {
+          "Authorization": `Bearer ${Config.access_token}`
+        }
+      })
+      .then(response => {
+        setProduct(response.data)
+        setSelectedColor(response.data.colors[0])
+        setSelectedSize(1)
+      })
   }, [])
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
-  const [selectedSize, setSelectedSize] = useState(1)
+  const [selectedSize, setSelectedSize] = useState(0)
   const ratings = []
-  const averageRating = product.average_rating
   for (let activeCounter = 0; activeCounter < 5; activeCounter++) {
-    ratings.push(<Star active={activeCounter < averageRating} />)
+    ratings.push(<Star active={activeCounter < product.average_rating} />)
   }
   return (
     <div className="content-container">
@@ -89,7 +75,7 @@ const Content = () => {
             <div className="size-column">
               <div className="row-headings">
                 <span>Size</span>
-                <a href="">Size Guide</a>
+                <a href="/">Size Guide</a>
               </div>
               <div className="sizes">
                 {product.sizes.map((size, index) =>

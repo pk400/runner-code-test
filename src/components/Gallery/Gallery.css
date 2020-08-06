@@ -1,18 +1,27 @@
-.primaryDisplay img {
+.carousel .slide {
+  background-color: #FFF;
+}
+
+/* .selected-thumbnail {
+  width: 75px;
+  height: 75px;
+} */
+/*
+.thumbnail {
+  height: 55px;
+  width: 55px;
+  overflow: hidden;
+  border: 1px solid #EEE;
+  display: inline-block;
+  align-self: flex-end;
   vertical-align: middle;
-}
+  border-radius: 0.2rem;
+  text-align: center;
+} */
 
-.arrow-left,
-.arrow-right {
-  width: 10%;
-}
-
-
-.selected-image {
-  width: 80%;
-}
 
 .thumbnails {
+  margin-top: 1rem;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -31,15 +40,12 @@
 }
 
 .thumbnails-container {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .thumbnails .selected-thumbnail {
   width: 75px;
   height: 75px;
-}
-
-.thumbnails-container {
-  display: flex;
-  justify-content: space-between;
 }
