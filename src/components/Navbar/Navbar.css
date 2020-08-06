@@ -1,5 +1,4 @@
 .top-navbar {
-  /* border: 1px solid #333; */
   display: flex;
   justify-content: space-between;
 }
@@ -8,21 +7,10 @@
   align-items: center;
 }
 
-.navbar-links {
-}
-
 .navbar-links ul {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-}
-
-.navbar-links li {
-  /* border: 1px solid #333; */
-}
-
-.navbar-left {
-
 }
 
 .navbar-center {
@@ -31,4 +19,10 @@
 
 .strikethrough {
   text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-navbar {
+    justify-content: space-around;
+  }
 }
