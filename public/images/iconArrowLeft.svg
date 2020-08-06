@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>iconArrowLeft</title>
+    <desc>Created with Sketch.</desc>
+    <g id="iconArrowLeft" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_icn_small-copy" transform="translate(21.000000, 21.000000) rotate(-270.000000) translate(-21.000000, -21.000000) translate(9.000000, 9.000000)">
+            <g id="arrow_icn_small">
+                <rect id="bg" x="0" y="0" width="24" height="24"></rect>
+                <polyline id="arrow" stroke="#D1D1D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="4 8.39673711 12 16.3967371 20 8.39673711"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

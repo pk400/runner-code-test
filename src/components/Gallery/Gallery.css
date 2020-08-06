@@ -1,0 +1,48 @@
+.primaryDisplay {
+}
+
+.primaryDisplay img {
+  vertical-align: middle;
+}
+
+.arrow-left,
+.arrow-right {
+  width: 10%;
+}
+
+
+.selected-image {
+  width: 80%;
+}
+
+.thumbnails {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnails div {
+  height: 55px;
+  width: 55px;
+  overflow: hidden;
+  border: 1px solid #EEE;
+  display: inline-block;
+  align-self: flex-end;
+  vertical-align: middle;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+.thumbnails-container {
+  width: 100%;
+}
+
+.thumbnails .selected-thumbnail {
+  width: 75px;
+  height: 75px;
+}
+
+.thumbnails-container {
+  display: flex;
+  justify-content: space-between;
+}

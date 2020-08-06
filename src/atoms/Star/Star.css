@@ -1,0 +1,6 @@
+.active-star {
+}
+
+.inactive-star {
+  filter: grayscale(100%);
+}

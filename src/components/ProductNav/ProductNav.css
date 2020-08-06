@@ -1,0 +1,47 @@
+.product-nav-container {
+  color: #333;
+}
+
+.product-nav-container ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.product-nav-container a {
+  text-decoration: none;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  width: 100%;
+  display: inline-block;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.product-nav-container a:visited,
+.product-nav-container a:link {
+  color: #333;
+}
+
+.product-nav-container li {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+.product-nav-container .selected {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.not-selected {
+  color: green;
+}
+
+.selected-content {
+  padding-top: 2rem;
+}

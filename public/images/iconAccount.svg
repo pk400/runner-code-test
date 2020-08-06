@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>iconAccount</title>
+    <desc>Created with Sketch.</desc>
+    <g id="iconAccount" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/user_icn" transform="translate(9.000000, 9.000000)">
+            <rect id="bg" x="0" y="0" width="24" height="24"></rect>
+            <path d="M12,13 C16.9705627,13 21,17.0294373 21,22 C21,22.5522847 20.5522847,23 20,23 C19.4477153,23 19,22.5522847 19,22 C19,18.1340068 15.8659932,15 12,15 C8.13400675,15 5,18.1340068 5,22 C5,22.5522847 4.55228475,23 4,23 C3.44771525,23 3,22.5522847 3,22 C3,17.0294373 7.02943725,13 12,13 Z M12,1 C14.7614237,1 17,3.23857625 17,6 C17,8.76142375 14.7614237,11 12,11 C9.23857625,11 7,8.76142375 7,6 C7,3.23857625 9.23857625,1 12,1 Z M12,3 C10.3431458,3 9,4.34314575 9,6 C9,7.65685425 10.3431458,9 12,9 C13.6568542,9 15,7.65685425 15,6 C15,4.34314575 13.6568542,3 12,3 Z" id="user_icn" fill="#1B2437" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
