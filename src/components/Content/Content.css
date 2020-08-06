@@ -40,6 +40,7 @@
 
 .size-color-row {
   display: flex;
+  justify-content: space-evenly;
   margin-bottom: 32px;
 }
 
@@ -165,6 +166,10 @@
     width: 100vw;
     margin-left: -6%;
     padding-left: 6%;
-    padding-right: 6%;
+    padding-right: -20%;
+  }
+
+  .addcart {
+    margin-left: -12%;
   }
 }

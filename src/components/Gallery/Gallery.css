@@ -2,24 +2,6 @@
   background-color: #FFF;
 }
 
-/* .selected-thumbnail {
-  width: 75px;
-  height: 75px;
-} */
-/*
-.thumbnail {
-  height: 55px;
-  width: 55px;
-  overflow: hidden;
-  border: 1px solid #EEE;
-  display: inline-block;
-  align-self: flex-end;
-  vertical-align: middle;
-  border-radius: 0.2rem;
-  text-align: center;
-} */
-
-
 .thumbnails {
   margin-top: 1rem;
   width: 90%;
@@ -37,6 +19,7 @@
   vertical-align: middle;
   border-radius: 0.2rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .thumbnails-container {

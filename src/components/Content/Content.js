@@ -30,7 +30,7 @@ const Content = () => {
     axios
       .get(Config.product_url, {
         headers: {
-          "Authorization": `Bearer ${Config.access_token}`
+          "Authorization": `Bearer ${process.env.ACCESS_TOKEN}`
         }
       })
       .then(response => {

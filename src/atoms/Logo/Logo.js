@@ -6,6 +6,7 @@ const Logo = () => {
       src="/images/iconLogo.svg"
       alt="Navbar logo"
       style={{
+        cursor: "pointer",
         verticalAlign: 'middle'
       }} />
   )

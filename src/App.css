@@ -1,5 +1,11 @@
 body {
   font-size: 100%;
-  font-family: "Lucida Grande"
+  font-family: "Lucida Grande";
+  overflow-x: hidden;
 }
 
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}

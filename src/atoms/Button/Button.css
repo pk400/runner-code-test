@@ -3,6 +3,15 @@
   border-radius: 8px;
   padding: 12px 18px 13px 17px;
   cursor: pointer;
+  width: 100%;
+}
+
+.sizes button {
+  margin-left: 0.5rem;
+}
+
+.sizes button:first-child {
+  margin-left: 0;
 }
 
 .button-selected {

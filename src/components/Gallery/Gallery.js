@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Gallery.css';
 
 const Gallery = ({
@@ -38,7 +38,7 @@ const Gallery = ({
               type="button"
               onClick={onClickHandler}
               title={label}
-              style={{ ...arrowStyles, left: 15 }}>
+              style={{ ...arrowStyles, left: 0 }}>
               <img src="/images/iconArrowLeft.svg" alt="Gallery arrow left" />
             </button>
           )
@@ -49,14 +49,14 @@ const Gallery = ({
               type="button"
               onClick={onClickHandler}
               title={label}
-              style={{ ...arrowStyles, right: 15 }}>
+              style={{ ...arrowStyles, right: 0 }}>
               <img src="/images/iconArrowRight.svg" alt="Gallery arrow right" />
             </button>
           )
         }>
         {thumbnails.map((thumbnail, index) =>
           <div>
-            <img src={"/images/" + thumbnail}/>
+            <img src={"/images/" + thumbnail} alt={`Product thumbnail ${index}`}/>
           </div>)}
       </Carousel>
       <div className="thumbnails-container">
@@ -71,7 +71,8 @@ const Gallery = ({
               <img
                 className="thumbnail"
                 src={"/images/" + thumbnail}
-                height={75 + "px"} />
+                height={75 + "px"}
+                alt={`Product ${index}`} />
               </div>)}
         </div>
         <img className="thumbnail-arrow-right" src="/images/iconArrowRight.svg" alt="Gallery arrow right" />

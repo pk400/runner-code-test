@@ -1,0 +1,8 @@
+{
+  "product_url": "https://api.getrunner.io/runner/v4/code-test-product",
+  "color_map": {
+    "black": "#1B2437",
+    "blue": "#127681",
+    "teal": "#32E0C4"
+  }
+}

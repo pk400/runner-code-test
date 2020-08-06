@@ -4,6 +4,7 @@ import Cart from '../../atoms/Cart/Cart';
 import Logo from '../../atoms/Logo/Logo'
 import Profile from '../../atoms/Profile/Profile';
 import Search from '../../atoms/Search/Search';
+
 import { isMobile } from '../../utils/responsive';
 
 import './Navbar.css'
@@ -11,7 +12,12 @@ import './Navbar.css'
 const NavbarBurgerMenu = ({children}) => {
   return (
     <div>
-      <img src="/images/iconMenu.svg" alt="Navigation drop-down menu" />
+      <img
+        src="/images/iconMenu.svg"
+        alt="Navigation drop-down menu"
+        style={{
+          cursor: "pointer"
+        }} />
     </div>
   )
 }
@@ -47,10 +53,10 @@ const Navbar = () => {
   const links = (
     <nav className="navbar-links">
       <ul>
-        <li>Home</li>
-        <li className="strikethrough">Shop</li>
-        <li>Blog</li>
-        <li>Contact</li>
+        <li><a href="/">Home</a></li>
+        <li className="strikethrough"><a href="/">Shop</a></li>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/">Contact</a></li>
       </ul>
     </nav>
   )
